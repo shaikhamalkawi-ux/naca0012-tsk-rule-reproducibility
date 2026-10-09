@@ -11,6 +11,8 @@ python -m pip install -r requirements.txt
 python tests/check_release.py
 ```
 
+This quick command first verifies and reconstructs the losslessly compressed R6/R9 pair tables from the tracked `.gz` / `.gz.partNN` files. On an ordinary checkout it creates approximately 27 MB of ignored CSV outputs; compare their SHA-256 values with `FILE_SHA256.json`.
+
 ## Full numerical retraining (not required for quick checks)
 
 From repo root, after installing requirements:

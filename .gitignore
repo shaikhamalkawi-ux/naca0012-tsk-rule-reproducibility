@@ -18,3 +18,7 @@ R9_EXTENSION/audit/
 R6_EXTENSION/qa/
 *.zip
 *.part??
+
+# Restored from tracked gzip snapshots by scripts/restore_large_tables.py
+results/r6/R6_MATCHED_PAIRS_0p5.csv
+results/r9/SHARED_SUPPORT_PAIRS.csv

@@ -30,7 +30,7 @@ The TSK system is **not** the lowest-error predictor in this benchmark. Rule rep
 - `57_H3_Airfoil_R5/`: original executable training and resampling code and the numerically checked derived input CSV (filenames preserved for path compatibility).
 - `R6_EXTENSION/analysis/`: after-the-fact similarity versus local-function analysis.
 - `R9_EXTENSION/code/`: common-activation-support sensitivity and checks.
-- `results/`: selected original R5, R6 and R9 result tables and pair-level numeric outputs. This is an **analysis snapshot, not the entire model/replicate archive**.
+- `results/`: selected R5/R6/R9 result tables and original pair-level numeric outputs. For GitHub upload reliability, the two largest tables are losslessly compressed; R9 gzip is divided into five tracked parts. `scripts/restore_large_tables.py` reconstructs both original CSVs with SHA-256 verification. This is **an analysis snapshot, not the complete model/replicate archive**.
 - `audits/`: recorded execution environment and checks from the archived computational run.
 - `tests/`: portable source-data, math and result-table consistency checks for the release candidate.
 - `docs/`: provenance, rights, conditional-inference limitations and execution instructions.
@@ -42,6 +42,8 @@ Python 3.13.5 and package versions from `requirements.txt` reproduce the recorde
 ```bash
 python tests/check_release.py
 ```
+
+The quick check automatically decompresses and SHA-256 verifies the two large pair-level CSV tables if they are absent. Alternatively run `python scripts/restore_large_tables.py` first. Git tracks the compressed components; the reconstituted CSVs are `.gitignore`d. No Internet access is required for restoration.
 
 For the full resource-intensive pipeline, see [REPRODUCE.md](REPRODUCE.md). To rerun the post hoc R6/R9 extensions, the parent R5 bootstrap tensor/NPZ artifacts must first be regenerated or retrieved from a separately authorized and versioned research archive; the compact GitHub release deliberately does **not** carry those large tensors. Do not describe the compact release as a byte-for-byte full-archive reproduction.
 

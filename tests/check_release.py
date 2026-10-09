@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Quick checks on the public-safe release candidate; no fitting or manuscript build."""
+"""Quick public snapshot checks; no model fitting or manuscript build."""
 from pathlib import Path
 import sys
+import subprocess
 import numpy as np
 import pandas as pd
 
 root=Path(__file__).resolve().parents[1]
+subprocess.run([sys.executable,str(root/"scripts/restore_large_tables.py")],check=True,cwd=root)
 sys.path.insert(0,str(root/'57_H3_Airfoil_R5'/'code'))
 from verify import verify_math
 
