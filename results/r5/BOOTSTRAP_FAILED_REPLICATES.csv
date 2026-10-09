@@ -1,0 +1,3 @@
+feature,fold,structure,branch,replicate,seed,drawn_groups,fcm_iterations,FCM_seed,status,n_matched,n_above_0p3,n_above_0p7,error
+F5,0,compact,relearn,141,2871400816,96,,,FAILED,,,,ArithmeticError: FIVE_FCM_RESTARTS_DID_NOT_CONVERGE
+F5,2,reference,relearn,115,3570847701,95,,,FAILED,,,,ArithmeticError: FIVE_FCM_RESTARTS_DID_NOT_CONVERGE

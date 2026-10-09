@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+*.log
+*.aux
+*.toc
+*.out
+*.synctex.gz
+.DS_Store
+# Full training state intentionally excluded from slim repository
+57_H3_Airfoil_R5/results/
+R9_EXTENSION/analysis/tasks/
+R9_EXTENSION/audit/
+R6_EXTENSION/qa/
+*.zip
+*.part??

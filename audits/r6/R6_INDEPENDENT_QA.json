@@ -1,0 +1,16 @@
+{
+  "pair_count": 50376,
+  "reconstruction_vs_prior_gate_max_abs_diff": {
+    "Jaccard": 5.551115123125783e-16,
+    "functional_disagreement_rmse_dB": 5.258016244624741e-13
+  },
+  "fold_descriptive_identity": "PASS",
+  "threshold_identity": "PASS",
+  "direct_group_mean_manual_parity_abs_err": 0.0,
+  "R5_PDF_SHA256_unchanged": {
+    "main.pdf": "364acfda72bc87b9ced2a2fbfae34a1fdef39096756f11896d6e225563fce376",
+    "supplement.pdf": "40befb490db87540af4dcb67baf588394137c6ba6c23306b534fb82dc04be756"
+  },
+  "R5_source_preserved": true,
+  "result": "PASS"
+}

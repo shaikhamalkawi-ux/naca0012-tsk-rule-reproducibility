@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "R5_payload_2101_immutable": true,
+    "all_three_cutoffs_direct_formula": true,
+    "all_matched_Jaccard_direct_formula": true,
+    "R6_50376_original_pair_metrics_preserved": true,
+    "all_20_prediction_metrics_recomputed": true,
+    "new_pairs_no_negative_disagreements": true,
+    "common_support_never_larger": true,
+    "empty_intersections_NA_not_zero": true,
+    "8000_attempts_7998_success_two_failures": true,
+    "forty_original_seed_replays_identical": true
+  },
+  "pass_count": 10,
+  "test_count": 10,
+  "formula_rows": 151128,
+  "errors": {
+    "max_D_parent_error": 8.526512829121202e-14,
+    "max_D_common_error": 8.526512829121202e-14,
+    "max_J_error": 4.440892098500626e-16,
+    "R6_max_D_difference": 5.115907697472721e-13,
+    "max_primary_RMSE_error": 8.881784197001252e-16
+  },
+  "note": "Independent code-path verification, not independent researchers or new experimental replication."
+}

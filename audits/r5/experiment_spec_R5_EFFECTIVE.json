@@ -1,0 +1,145 @@
+{
+  "version": "R5_INDEPENDENT_REBUILD_EXECUTED",
+  "status": "EXECUTED_WITH_REPLAYABLE_OUTPUTS",
+  "seed": 20261007,
+  "data_gate": "ADMITTED_SEMANTIC_ONLY_NOT_RAW_UCI_BYTE_IDENTITY",
+  "local_candidate": {
+    "rows": 1503,
+    "groups": 106,
+    "source": "data/derived/airfoil_local_F5_CANDIDATE_NOT_UCI_VERIFIED.csv"
+  },
+  "feature_sets": {
+    "F4": [
+      "log10_frequency",
+      "angle",
+      "chord",
+      "velocity"
+    ],
+    "F5": [
+      "log10_frequency",
+      "angle",
+      "chord",
+      "velocity",
+      "log10_displacement"
+    ]
+  },
+  "validation": {
+    "outer": "GroupKFold",
+    "outer_splits": 10,
+    "inner": "GroupKFold",
+    "inner_splits": 5,
+    "fold_files_created": true,
+    "score": "sqrt(mean(group_mean_squared_error))",
+    "fit_weights": "equal_rows"
+  },
+  "clustering": {
+    "method": "FCM",
+    "fuzzifier": 2,
+    "max_iter": 2000,
+    "tol": 1e-06,
+    "seeds": [
+      11,
+      23,
+      47,
+      71,
+      101
+    ],
+    "select_restart": "lowest_converged_input_objective",
+    "rule_counts": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "width_floor": 0.05,
+    "width_multipliers": [
+      0.75,
+      1.0,
+      1.5
+    ],
+    "max_iter_amendment": "Uniform post-FCM-nonconvergence correction from the v2 500 iteration cap; not a pre-registered change."
+  },
+  "ridge": {
+    "loss": "mean_squared_error",
+    "penalty": "all_consequent_coefficients_in_standardized_input_coordinates",
+    "target_center": "training_mean",
+    "lambdas": [
+      1e-06,
+      0.0001,
+      0.01,
+      1,
+      100
+    ]
+  },
+  "stability": {
+    "fixed_antecedent_replicates": 500,
+    "relearn_antecedent_replicates": 200,
+    "resample_only_outer_training_groups": true,
+    "reselect_hyperparameters": false,
+    "reference_R": 6,
+    "reference_h": 1.0,
+    "matching": "group_weighted_activation_Jaccard_Hungarian",
+    "match_threshold": 0.5,
+    "match_threshold_sensitivity": [
+      0.3,
+      0.7
+    ]
+  },
+  "conditional_OOF_loss_resampling": {
+    "replicates": 2000,
+    "probabilities": [
+      0.025,
+      0.975
+    ],
+    "label": "conditional_group_resampling_range",
+    "full_retraining": false,
+    "p_values_planned": false
+  },
+  "sensitivity": {
+    "SVD_relative_cutoffs": [
+      1e-12,
+      1e-10,
+      1e-08,
+      1e-06
+    ],
+    "gaussian_floor": [
+      0.025,
+      0.1
+    ],
+    "original_feature_scale": true
+  },
+  "source_constraints": {
+    "ANFIS_implementation_claim": false,
+    "first_grouped_split_claim": false,
+    "first_4v5_claim": false,
+    "new_rank_theory_claim": false,
+    "external_validation_claim": false,
+    "FFLS_claim": false,
+    "human_validated_interpretability_claim": false
+  },
+  "dispersion_definition": {
+    "pointwise": "sample standard deviation across successful bootstrap predictions, ddof=1",
+    "aggregate": "sqrt(equal-configuration mean of pointwise variance)",
+    "local_rule": "same definition on fixed supported parent-training anchors; equal represented-configuration weights",
+    "insufficient_successes": "not assessable when fewer than 2",
+    "relearned_rule_dispersion": "condition on valid match; always report match frequency"
+  },
+  "coordinate_alignment": "Evaluate each fit in its own preprocessing; convert affine consequents to parent feature coordinates including target-mean offset. Do not compare raw/log coefficients as identical coordinates.",
+  "coverage_log_firing": "max_r log(a_r(z)), unnormalized, not max absolute log firing",
+  "fixed_R6_h1_lambda": "Select only using inner grouped CV from the declared ridge penalty grid",
+  "source_provenance": "SEMANTICALLY_VERIFIED_NASA_UCI_NUMERIC_COPY__ORIGINAL_UCI_ZIP_BYTES_NOT_HASHED",
+  "execution": {
+    "TSK_grouped_F4_F5": "COMPLETE",
+    "TSK_raw_F4_F5_sensitivity": "COMPLETE",
+    "TSK_rowwise_F4_F5_contextual": "COMPLETE",
+    "4_nonfuzzy_baselines_grouped_F4_F5": "COMPLETE",
+    "4_nonfuzzy_baselines_rowwise_F4_F5_contextual": "COMPLETE",
+    "bootstrap_expected": 28000,
+    "bootstrap_success": 27998,
+    "bootstrap_recorded_nonconvergence": 2,
+    "independent_replay_passed": 13,
+    "unit_checks_passed": 17
+  }
+}

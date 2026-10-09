@@ -1,0 +1,136 @@
+{
+  "scientific_direct_checks": {
+    "checks": {
+      "R5_payload_2101_immutable": true,
+      "all_three_cutoffs_direct_formula": true,
+      "all_matched_Jaccard_direct_formula": true,
+      "R6_50376_original_pair_metrics_preserved": true,
+      "all_20_prediction_metrics_recomputed": true,
+      "new_pairs_no_negative_disagreements": true,
+      "common_support_never_larger": true,
+      "empty_intersections_NA_not_zero": true,
+      "8000_attempts_7998_success_two_failures": true,
+      "forty_original_seed_replays_identical": true
+    },
+    "pass_count": 10,
+    "test_count": 10,
+    "formula_rows": 151128,
+    "errors": {
+      "max_D_parent_error": 8.526512829121202e-14,
+      "max_D_common_error": 8.526512829121202e-14,
+      "max_J_error": 4.440892098500626e-16,
+      "R6_max_D_difference": 5.115907697472721e-13,
+      "max_primary_RMSE_error": 8.881784197001252e-16
+    },
+    "note": "Independent code-path verification, not independent researchers or new experimental replication."
+  },
+  "clean_compilation": {
+    "main": {
+      "pages": 14,
+      "render_parity_pages": 14,
+      "overfull_hbox": 0,
+      "undefined_references": false
+    },
+    "supplement": {
+      "pages": 6,
+      "render_parity_pages": 6,
+      "overfull_hbox": 0,
+      "undefined_references": false
+    },
+    "JEAS_review": {
+      "pages": 25,
+      "render_parity_pages": 25,
+      "overfull_hbox": 0,
+      "undefined_references": false
+    }
+  },
+  "references": {
+    "cited": 20,
+    "listed": 20,
+    "first_appearance_order": true
+  },
+  "inherited_tables": {
+    "checks": {
+      "tab:prediction": true,
+      "tab:contrasts": true,
+      "tab:bootstrap": true,
+      "tab:posthocrules": true,
+      "tab:S1": true,
+      "tab:S2": true,
+      "tab:S3": true,
+      "tab:S4": true,
+      "tab:S5": true,
+      "tab:S6": true,
+      "tab:S7": true,
+      "tab:S8": true
+    },
+    "inherited_tables": 12,
+    "all_preserved": true,
+    "note": "Float placement may differ; inherited numeric table contents remain identical."
+  },
+  "figures": {
+    "unchanged": [
+      "Fig3_ConditionRuleCount.pdf",
+      "Fig7_F5_SimilarityVsLocalFunctionalDifference.pdf",
+      "FigS1_Threshold_Sensitivity.pdf",
+      "Fig1_GroupStructure.pdf",
+      "Fig6_RuleMatchCoverage.pdf",
+      "Fig5_GlobalVsLocalDispersion.pdf",
+      "Fig7_F4_SimilarityVsLocalFunctionalDifference.pdf",
+      "Fig2_ModelComparison.pdf"
+    ],
+    "revised_spectra": [
+      "Fig4_MedianSpectrum.pdf",
+      "Fig4_HighestErrorSpectrum.pdf"
+    ],
+    "new": "Fig9_SharedActivationSupport.pdf"
+  },
+  "combined": {
+    "pages": 20,
+    "text_parity": 20,
+    "pixel_parity": 20
+  },
+  "pdf_fonts": {
+    "Main_Manuscript": {
+      "pages": 14,
+      "listed_fonts": 40,
+      "all_embedded": true,
+      "Type3": 0,
+      "text_based": true,
+      "encrypted": false
+    },
+    "Supplement": {
+      "pages": 6,
+      "listed_fonts": 23,
+      "all_embedded": true,
+      "Type3": 0,
+      "text_based": true,
+      "encrypted": false
+    },
+    "Main_and_Supplement_Combined": {
+      "pages": 20,
+      "listed_fonts": 62,
+      "all_embedded": true,
+      "Type3": 0,
+      "text_based": true,
+      "encrypted": false
+    },
+    "JEAS_Author_Review": {
+      "pages": 25,
+      "listed_fonts": 35,
+      "all_embedded": true,
+      "Type3": 0,
+      "text_based": true,
+      "encrypted": false
+    }
+  },
+  "visual_inspection": {
+    "main": 14,
+    "supplement": 6,
+    "JEAS_main": 25,
+    "report": 2,
+    "clipping_or_overlap_seen": false
+  },
+  "submission_status": "AUTHOR_REVIEW_PENDING; no journal submission; declarations and repository unresolved",
+  "drive_status": "Upstream read verified; no write action exposed in current session; R9 not uploaded"
+}
