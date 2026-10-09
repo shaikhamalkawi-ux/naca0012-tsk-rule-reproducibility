@@ -11,7 +11,9 @@ python -m pip install -r requirements.txt
 python tests/check_release.py
 ```
 
-This quick command first verifies and reconstructs the losslessly compressed R6/R9 pair tables from the tracked `.gz` / `.gz.partNN` files. On an ordinary checkout it creates approximately 27 MB of ignored CSV outputs; compare their SHA-256 values with `FILE_SHA256.json`.
+The ordinary Git checkout already contains the exact complete R5/R6/R9 CSV tables (approximately 28.7 MB combined). The quick check verifies the tracked R6/R9 pair tables against `FILE_SHA256.json`; if either full CSV is absent, it reconstructs exact original bytes from the lossless `.gz` / `.gz.partNN` backups first. The recorded SHA-256 values are checked in both situations.
+
+The automated GitHub workflow additionally runs repository file-integrity, local-document-link, basic private-key/token-pattern and Python-compilation checks. These screens are not a comprehensive security audit, and the portable test is **not** a replay of nested CV and 28,000 bootstrap attempts.
 
 ## Full numerical retraining (not required for quick checks)
 

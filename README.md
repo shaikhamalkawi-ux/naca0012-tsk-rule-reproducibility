@@ -2,7 +2,7 @@
 
 Research software and numerical evidence for **Predictive Accuracy and Local-Rule Reproducibility in Takagi–Sugeno Models of Airfoil Self-Noise** (manuscript under author/venue preparation).
 
-> **PUBLIC RESEARCH-SOFTWARE SNAPSHOT (2026-10-09).** Uploaded at the account holder’s express request. This snapshot is not a journal submission, does not constitute a verified complete archival rerun, and has no Zenodo DOI or software reuse license at this stage. The data originate from the NASA/UCI Airfoil Self-Noise benchmark; no independent physical validation or generalization to other airfoil geometries is claimed.
+> **PUBLIC RESEARCH-SOFTWARE SNAPSHOT (2026-10-09).** Uploaded at the account holder’s express request. A GitHub-hosted, version-pinned portable check verifies the published numeric CSV evidence and the file manifest; it is not a complete experimental retraining or journal submission. No Zenodo DOI or software reuse license has been issued. The data originate from the NASA/UCI Airfoil Self-Noise benchmark; no independent physical validation or generalization to other airfoil geometries is claimed.
 
 ## Purpose
 
@@ -30,7 +30,7 @@ The TSK system is **not** the lowest-error predictor in this benchmark. Rule rep
 - `57_H3_Airfoil_R5/`: original executable training and resampling code and the numerically checked derived input CSV (filenames preserved for path compatibility).
 - `R6_EXTENSION/analysis/`: after-the-fact similarity versus local-function analysis.
 - `R9_EXTENSION/code/`: common-activation-support sensitivity and checks.
-- `results/`: selected R5/R6/R9 result tables and original pair-level numeric outputs. For GitHub upload reliability, the two largest tables are losslessly compressed; R9 gzip is divided into five tracked parts. `scripts/restore_large_tables.py` reconstructs both original CSVs with SHA-256 verification. This is **an analysis snapshot, not the complete model/replicate archive**.
+- `results/`: selected R5/R6/R9 result tables and original pair-level numeric outputs. All three pair-level CSVs (R5, R6 and R9) are tracked in full. Lossless gzip backups for R6 and R9 remain tracked (R9 gzip in five parts); `scripts/restore_large_tables.py` verifies existing CSVs or restores missing copies from these backups using the archived SHA-256 values. This is **an analysis snapshot, not the complete model/replicate archive**.
 - `audits/`: recorded execution environment and checks from the archived computational run.
 - `tests/`: portable source-data, math and result-table consistency checks for the release candidate.
 - `docs/`: provenance, rights, conditional-inference limitations and execution instructions.
@@ -43,7 +43,7 @@ Python 3.13.5 and package versions from `requirements.txt` reproduce the recorde
 python tests/check_release.py
 ```
 
-The quick check automatically decompresses and SHA-256 verifies the two large pair-level CSV tables if they are absent. Alternatively run `python scripts/restore_large_tables.py` first. Git tracks the compressed components; the reconstituted CSVs are `.gitignore`d. No Internet access is required for restoration.
+The quick check SHA-256 verifies the already-tracked full R6/R9 CSVs, or restores them from the tracked compressed backups if they are missing from a checkout. Run `python scripts/restore_large_tables.py` separately to verify/restore only those tables. No Internet access is required for restoration. The [verification workflow](.github/workflows/verify-release-csvs.yml) checks the tracked manifest, relevant file types, basic credential patterns, Python compilation, and the portable numerical-release tests; it does **not** retrain the full models.
 
 For the full resource-intensive pipeline, see [REPRODUCE.md](REPRODUCE.md). To rerun the post hoc R6/R9 extensions, the parent R5 bootstrap tensor/NPZ artifacts must first be regenerated or retrieved from a separately authorized and versioned research archive; the compact GitHub release deliberately does **not** carry those large tensors. Do not describe the compact release as a byte-for-byte full-archive reproduction.
 
@@ -53,4 +53,4 @@ Brooks, T., Pope, D., & Marcolini, M. (1989). *Airfoil Self-Noise* [Dataset]. UC
 
 ## Publication status and software rights
 
-No Zenodo DOI has been issued for this candidate. No software license has been selected by the authors, and no right to redistribute publisher PDFs is claimed. See [RELEASE_APPROVAL.md](RELEASE_APPROVAL.md) for publication status and remaining release requirements. These materials are not submitted to a journal through GitHub merely by being uploaded.
+No Zenodo DOI has been issued for this candidate. No software license has been selected by the authors, and no right to redistribute publisher PDFs is claimed. See [RELEASE_APPROVAL.md](RELEASE_APPROVAL.md) for remaining release requirements, and [ZENODO_DEPOSIT_DRAFT.md](ZENODO_DEPOSIT_DRAFT.md) for provisional, explicitly unapproved deposit metadata. These materials are not submitted to a journal through GitHub merely by being uploaded.
