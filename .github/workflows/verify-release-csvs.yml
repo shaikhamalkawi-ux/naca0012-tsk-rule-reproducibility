@@ -27,7 +27,10 @@ jobs:
           from pathlib import Path
           import hashlib, json, re, subprocess
           manifest = json.loads(Path('FILE_SHA256.json').read_text(encoding='utf-8'))
-          tracked = set(filter(None,subprocess.check_output(['git','ls-files','-z']).decode().split('\0')))
+          all_tracked = set(filter(None,subprocess.check_output(['git','ls-files','-z']).decode().split('\0')))
+          # Scope the historical R9 manifest to its original files. R19 extension
+          # content is independently validated by verify-r19-snapshot.yml.
+          tracked = {p for p in all_tracked if not p.startswith('R19_EXTERNAL_TRANSFER/') and p != '.github/workflows/verify-r19-snapshot.yml'}
           assert tracked - {'FILE_SHA256.json'} == set(manifest), f'Manifest/checkout mismatch: {tracked ^ (set(manifest) | {"FILE_SHA256.json"})}'
           for rel in sorted(manifest):
               actual = hashlib.sha256(Path(rel).read_bytes()).hexdigest()
