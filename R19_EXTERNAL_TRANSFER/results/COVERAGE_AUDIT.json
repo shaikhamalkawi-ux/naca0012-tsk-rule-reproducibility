@@ -1,0 +1,15 @@
+{
+  "design": "descriptive, seven nested heldout geometry tests with 38 correlated spectra; no row-level p-values",
+  "cutoffs": "train-only 1%, 5%, 10% quantiles of parent-model absolute best log activation",
+  "n_geometries": 7,
+  "n_spectra": 38,
+  "n_rows": 343,
+  "geometry_level_spearman_log_activation_vs_TSK_RMSE": -0.7500000000000002,
+  "spectrum_level_naive_spearman_log_activation_vs_TSK_RMSE_descriptive_only": -0.32793522267206476,
+  "within_geometry_centered_pearson_log_activation_vs_TSK_RMSE_descriptive_only": 0.07174650372766611,
+  "low_coverage_test_rows_train_q05": 30,
+  "rows_maxweight_ge_0_9_and_low_coverage_q05": 10,
+  "fraction_low_coverage_q05_while_normalized_weight_ge_0_9": 0.3333333333333333,
+  "normalized_target_not_dB": true,
+  "caveat": "Geometry-level N=7 is too small for confident transfer effects or universal coverage-error thresholds."
+}
