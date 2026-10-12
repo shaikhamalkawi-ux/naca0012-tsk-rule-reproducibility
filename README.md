@@ -1,3 +1,9 @@
+# R19 Southampton external-transfer extension (12 October 2026)
+
+A verified [R19 source-to-result research snapshot](R19_EXTERNAL_TRANSFER/README.md) has been added with seven leave-one-geometry-out folds, the corrected 12-candidate Extra Trees search, independent saved-prediction replay, and the absolute-versus-normalized rule-firing audit. **It does not validate absolute-dB acoustic prediction on an unseen geometry.** All historical R5–R9 files and the separate locked R18 scientific baseline remain unchanged. The R19 IEEE Access manuscript remains under author review; no Zenodo DOI or published GitHub Release is claimed.
+
+---
+
 # NACA 0012 — TSK rule reproducibility
 
 Research software and numerical evidence for **Predictive Accuracy and Local-Rule Reproducibility in Takagi–Sugeno Models of Airfoil Self-Noise** (manuscript under author/venue preparation).

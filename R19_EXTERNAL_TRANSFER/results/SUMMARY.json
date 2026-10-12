@@ -1,0 +1,11 @@
+{
+  "n_rows": 343,
+  "n_geometries": 7,
+  "n_spectra": 38,
+  "TSK_row_RMSE": 0.05549191606694713,
+  "ET_row_RMSE": 0.04153805373018891,
+  "TSK_equal_geometry_RMSE": 0.05939610283816987,
+  "ET_equal_geometry_RMSE": 0.047838808038834585,
+  "TSK_equal_spectrum_RMSE": 0.05636793120717744,
+  "ET_equal_spectrum_RMSE": 0.04322684449353847
+}

@@ -1,0 +1,20 @@
+name: Verify R19 research snapshot
+on:
+  push:
+    paths:
+      - 'R19_EXTERNAL_TRANSFER/**'
+      - '.github/workflows/verify-r19-snapshot.yml'
+  pull_request:
+    paths:
+      - 'R19_EXTERNAL_TRANSFER/**'
+      - '.github/workflows/verify-r19-snapshot.yml'
+jobs:
+  verify-r19:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Verify R19 integrity and aggregate metrics (stdlib only)
+        run: python3 R19_EXTERNAL_TRANSFER/VERIFY_RELEASE.py

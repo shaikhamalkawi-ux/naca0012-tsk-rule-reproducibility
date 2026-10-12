@@ -1,0 +1,15 @@
+{
+  "project": "57 H3 Airfoil",
+  "extension": "R19 clean external transfer",
+  "source_data_sha256": "5cf21445afb0b32bbadf1b94550ea8a9d8561a23aac94f8ad49aab95f152f8eb",
+  "canonical_data_sha256": "b7cfb8f60bbfee139ce6c9183a16de46979152906a35b55fbba22f34557e7fd4",
+  "previous_github_main_commit": "6c537312da0388a0c9a2784ee175be95f8657747",
+  "n_rows": 343,
+  "n_spectra": 38,
+  "n_geometry": 7,
+  "extra_trees_grid_count": 12,
+  "tsk_grid_count": 45,
+  "scientific_result_locked": true,
+  "manuscript_submission_state": "AUTHOR_REVIEW_HOLD",
+  "no_zenodo_doi": true
+}
