@@ -91,7 +91,25 @@ def main():
    for k,v in outputs.items():z[k+'_RMSE_dB']=rmse(y[te],v) if v is not None else None
    report['leave_geometry_out'].append(z)
    print('LEAVE_GEOMETRY_OUT',name,z,flush=True)
- for arm in ['within_geometry_angle_heldout','leave_geometry_out']:
+ report['within_geometry_contiguous_angle_blocks']=[]
+ with threadpool_limits(limits=1):
+  for name in SOURCE:
+   ix=np.where(geom==name)[0];sorted_angles=np.sort(np.unique(ang[ix]));blocks=np.array_split(sorted_angles,5)
+   pred={k:np.full(len(ix),np.nan) for k in ['mean','TSK','ET']};fstatus=[];ranges=[]
+   for fold,block in enumerate(blocks):
+    te=np.where(np.isin(ang[ix],block))[0];tr=np.where(~np.isin(ang[ix],block))[0]
+    assert not (set(ang[ix][tr])&set(ang[ix][te])) and len(te)>0
+    outs,status=model_predict(X[ix][tr],y[ix][tr],X[ix][te])
+    for k,v in outs.items():
+     if v is not None:pred[k][te]=v
+    fstatus.append(status)
+    ranges.append({'fold':fold,'min_angle':float(block.min()),'max_angle':float(block.max()),'n_test_angles':len(block)})
+   z={'geometry':name,'n_rows':int(len(ix)),'blocked_angle_ranges':ranges,'fold_status':fstatus}
+   for k,v in pred.items():z[k+'_RMSE_dB']=rmse(y[ix],v) if np.isfinite(v).all() else None
+   report['within_geometry_contiguous_angle_blocks'].append(z)
+   print('CONTIGUOUS_BLOCKS',name,z,flush=True)
+
+ for arm in ['within_geometry_angle_heldout','within_geometry_contiguous_angle_blocks','leave_geometry_out']:
   report[arm+'_equal_geometry_RMSE_dB']={key:(float(np.sqrt(np.mean([z[key]**2 for z in report[arm]]))) if all(z[key] is not None for z in report[arm]) else None) for key in ['mean_RMSE_dB','TSK_RMSE_dB','ET_RMSE_dB']}
  report['scientific_status']='CONDITIONAL_BRISTOL_EXTERNAL_DB_EXPERIMENT; NOT_NASA_TO_BRISTOL_MODEL_TRANSFER'
  OUTPUT.parent.mkdir(parents=True,exist_ok=True);OUTPUT.write_text(json.dumps(report,indent=2,ensure_ascii=False,allow_nan=False))
