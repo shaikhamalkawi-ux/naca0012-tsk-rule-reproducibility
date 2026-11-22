@@ -1,0 +1,3 @@
+budget_kind,pointwise_prediction_budget_dB,max_relative_ridge_objective_increase,protected_local_slopes,strict_reversible_local_slopes,total_local_slopes,context
+primary,0.1,0.01,403,107,510,finite_training_inputs_frozen_antecedents
+post_review_contextual,1.0,0.01,135,375,510,nasa_rp1218_microphone_pair_agreement_not_instrument_uncertainty
