@@ -7,6 +7,7 @@ on:
       - 'research/bristol_external_spl/bristol_source_probe.py'
       - 'research/bristol_external_spl/bristol_model_audit.py'
       - 'research/bristol_external_spl/bristol_shape_probe.py'
+      - 'research/bristol_external_spl/bristol_shape_aware.py'
       - '.github/workflows/bristol-external-spl-audit.yml'
   workflow_dispatch:
 permissions:
@@ -25,6 +26,8 @@ jobs:
         run: python research/bristol_external_spl/bristol_model_audit.py
       - name: Inspect separate geometry-coordinate files for possible shape-aware modeling
         run: python research/bristol_external_spl/bristol_shape_probe.py
+      - name: Evaluate shape-aware unseen-geometry transfer using publisher profiles
+        run: python research/bristol_external_spl/bristol_shape_aware.py
       - name: Upload summary-only audit (no external raw data)
         if: always()
         uses: actions/upload-artifact@v4
@@ -34,11 +37,12 @@ jobs:
             research/bristol_external_spl/probe_inventory.json
             research/bristol_external_spl/experiment_results.json
             research/bristol_external_spl/shape_probe.json
+            research/bristol_external_spl/shape_aware_results.json
           if-no-files-found: warn
       - name: Commit reproducible metadata-only outputs on experiment branch
         if: success()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add research/bristol_external_spl/probe_inventory.json research/bristol_external_spl/experiment_results.json research/bristol_external_spl/shape_probe.json
+          git add research/bristol_external_spl/probe_inventory.json research/bristol_external_spl/experiment_results.json research/bristol_external_spl/shape_probe.json research/bristol_external_spl/shape_aware_results.json
           git diff --cached --quiet || (git commit -m 'research: Bristol source-only external experiment summary' && git push)
