@@ -1,0 +1,101 @@
+{
+  "source_doi": "10.5523/bris.30c8q39wi1mxf205flnun3l5rl",
+  "shape_source_hashes": {
+    "NACA 0012": "f806d37c030f64b7df56c2adfec52b9aaef2155e245bd26333e8d29d6cdcddae",
+    "NACA 0024": "7ac196d8d9eb2c084e900ba1535b94e77ba517112b1f2110ccfc3d10a7221baa",
+    "NACA 16-506": "c95656e8c2d482091e20aeab197ea8f3955284c1ee3d18836de354d7b7aedf36",
+    "NACA 16-616": "0ed5f25970a5de88565563bbc5fee1a15bb9527ff4c8813e5bea27d23c621fcd"
+  },
+  "geometry_descriptors": {
+    "NACA 0012": {
+      "tmax_over_c": 0.1200141208,
+      "x_over_c_at_tmax": 0.3,
+      "camber_at_absmax_over_c": 0.0,
+      "absmax_camber_over_c": 0.0,
+      "section_area_over_c2": 0.08144595987945,
+      "surface_profile_points": 279
+    },
+    "NACA 0024": {
+      "tmax_over_c": 0.24008,
+      "x_over_c_at_tmax": 0.3,
+      "camber_at_absmax_over_c": 0.0,
+      "absmax_camber_over_c": 0.0,
+      "section_area_over_c2": 0.16318898,
+      "surface_profile_points": 35
+    },
+    "NACA 16-506": {
+      "tmax_over_c": 0.059999,
+      "x_over_c_at_tmax": 0.5,
+      "camber_at_absmax_over_c": 0.0275795,
+      "absmax_camber_over_c": 0.0275795,
+      "section_area_over_c2": 0.044214609737957045,
+      "surface_profile_points": 195
+    },
+    "NACA 16-616": {
+      "tmax_over_c": 0.16,
+      "x_over_c_at_tmax": 0.5,
+      "camber_at_absmax_over_c": 0.033095,
+      "absmax_camber_over_c": 0.033095,
+      "section_area_over_c2": 0.11796946999999999,
+      "surface_profile_points": 195
+    }
+  },
+  "features": [
+    "log10(frequency_Hz)",
+    "geometric_angle_deg",
+    "tmax/chord",
+    "max_abs_signed_camber/chord"
+  ],
+  "loo_rows": [
+    {
+      "heldout_geometry": "NACA 0012",
+      "TSK_status": "OK",
+      "n_train_rows": 1092,
+      "n_test_rows": 372,
+      "inside_shape_training_box": true,
+      "mean_RMSE_dB": 7.63178797773363,
+      "TSK_RMSE_dB": 3.4475914245779165,
+      "ET_RMSE_dB": 2.5394714272302688
+    },
+    {
+      "heldout_geometry": "NACA 0024",
+      "TSK_status": "OK",
+      "n_train_rows": 1104,
+      "n_test_rows": 360,
+      "inside_shape_training_box": false,
+      "mean_RMSE_dB": 8.114191477843237,
+      "TSK_RMSE_dB": 2.249074589008529,
+      "ET_RMSE_dB": 1.7807584027614216
+    },
+    {
+      "heldout_geometry": "NACA 16-506",
+      "TSK_status": "OK",
+      "n_train_rows": 1092,
+      "n_test_rows": 372,
+      "inside_shape_training_box": false,
+      "mean_RMSE_dB": 6.909759584399442,
+      "TSK_RMSE_dB": 2.5652135705594588,
+      "ET_RMSE_dB": 2.6453086999669386
+    },
+    {
+      "heldout_geometry": "NACA 16-616",
+      "TSK_status": "OK",
+      "n_train_rows": 1104,
+      "n_test_rows": 360,
+      "inside_shape_training_box": false,
+      "mean_RMSE_dB": 7.7753539718994285,
+      "TSK_RMSE_dB": 3.2464730900058267,
+      "ET_RMSE_dB": 3.295921066874248
+    }
+  ],
+  "no_geometry_id": true,
+  "shape_descriptors_known_without_acoustic_test_response": true,
+  "metric": "held-out-geometry RMSE dB",
+  "model_settings": "R6,h1,lambda.01 and 400-tree ET fixed controls, no geometry test tuning",
+  "equal_geometry_RMSE_dB": {
+    "TSK_RMSE_dB": 2.9182242599079604,
+    "ET_RMSE_dB": 2.6211051779693335,
+    "mean_RMSE_dB": 7.620452709300078
+  },
+  "warning": "Only 4 distinct geometry descriptors; 3 geometries in each train fold. Does not establish robust population transfer, structural causality, or NASA-to-Bristol SPL equivalence."
+}
