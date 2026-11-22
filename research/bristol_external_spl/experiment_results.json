@@ -147,10 +147,201 @@
     "n_shared_inputs_with_gt_1dB_spread": 366,
     "scope": "pooled observed-input interpolation lower bound, not a LOGO test lower bound"
   },
+  "within_geometry_contiguous_angle_blocks": [
+    {
+      "geometry": "NACA 0012",
+      "n_rows": 372,
+      "blocked_angle_ranges": [
+        {
+          "fold": 0,
+          "min_angle": -5.0,
+          "max_angle": 1.0,
+          "n_test_angles": 7
+        },
+        {
+          "fold": 1,
+          "min_angle": 2.0,
+          "max_angle": 7.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 2,
+          "min_angle": 8.0,
+          "max_angle": 13.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 3,
+          "min_angle": 14.0,
+          "max_angle": 19.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 4,
+          "min_angle": 20.0,
+          "max_angle": 25.0,
+          "n_test_angles": 6
+        }
+      ],
+      "fold_status": [
+        "OK",
+        "OK",
+        "OK",
+        "OK",
+        "OK"
+      ],
+      "mean_RMSE_dB": 7.566490625500844,
+      "TSK_RMSE_dB": 2.516740459471721,
+      "ET_RMSE_dB": 1.2105467920048516
+    },
+    {
+      "geometry": "NACA 0024",
+      "n_rows": 360,
+      "blocked_angle_ranges": [
+        {
+          "fold": 0,
+          "min_angle": -4.0,
+          "max_angle": 1.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 1,
+          "min_angle": 2.0,
+          "max_angle": 7.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 2,
+          "min_angle": 8.0,
+          "max_angle": 13.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 3,
+          "min_angle": 14.0,
+          "max_angle": 19.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 4,
+          "min_angle": 20.0,
+          "max_angle": 25.0,
+          "n_test_angles": 6
+        }
+      ],
+      "fold_status": [
+        "OK",
+        "OK",
+        "OK",
+        "OK",
+        "OK"
+      ],
+      "mean_RMSE_dB": 8.181485318604256,
+      "TSK_RMSE_dB": 1.5623738771564826,
+      "ET_RMSE_dB": 0.836238270763693
+    },
+    {
+      "geometry": "NACA 16-506",
+      "n_rows": 372,
+      "blocked_angle_ranges": [
+        {
+          "fold": 0,
+          "min_angle": -5.0,
+          "max_angle": 1.0,
+          "n_test_angles": 7
+        },
+        {
+          "fold": 1,
+          "min_angle": 2.0,
+          "max_angle": 7.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 2,
+          "min_angle": 8.0,
+          "max_angle": 13.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 3,
+          "min_angle": 14.0,
+          "max_angle": 19.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 4,
+          "min_angle": 20.0,
+          "max_angle": 25.0,
+          "n_test_angles": 6
+        }
+      ],
+      "fold_status": [
+        "OK",
+        "OK",
+        "OK",
+        "OK",
+        "OK"
+      ],
+      "mean_RMSE_dB": 6.947459619010966,
+      "TSK_RMSE_dB": 2.379143548458755,
+      "ET_RMSE_dB": 1.559351022166897
+    },
+    {
+      "geometry": "NACA 16-616",
+      "n_rows": 360,
+      "blocked_angle_ranges": [
+        {
+          "fold": 0,
+          "min_angle": -4.0,
+          "max_angle": 1.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 1,
+          "min_angle": 2.0,
+          "max_angle": 7.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 2,
+          "min_angle": 8.0,
+          "max_angle": 13.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 3,
+          "min_angle": 14.0,
+          "max_angle": 19.0,
+          "n_test_angles": 6
+        },
+        {
+          "fold": 4,
+          "min_angle": 20.0,
+          "max_angle": 25.0,
+          "n_test_angles": 6
+        }
+      ],
+      "fold_status": [
+        "OK",
+        "OK",
+        "OK",
+        "OK",
+        "OK"
+      ],
+      "mean_RMSE_dB": 7.579528977549583,
+      "TSK_RMSE_dB": 1.9473124784509193,
+      "ET_RMSE_dB": 1.3210557744146145
+    }
+  ],
   "within_geometry_angle_heldout_equal_geometry_RMSE_dB": {
     "mean_RMSE_dB": 7.5003239752973805,
     "TSK_RMSE_dB": 1.3602223386248635,
     "ET_RMSE_dB": 0.4562658903283955
+  },
+  "within_geometry_contiguous_angle_blocks_equal_geometry_RMSE_dB": {
+    "mean_RMSE_dB": 7.581308216324392,
+    "TSK_RMSE_dB": 2.13467471674647,
+    "ET_RMSE_dB": 1.2591149620437994
   },
   "leave_geometry_out_equal_geometry_RMSE_dB": {
     "mean_RMSE_dB": 7.620452709300078,
