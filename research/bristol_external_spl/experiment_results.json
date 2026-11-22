@@ -1,0 +1,161 @@
+{
+  "source_doi": "10.5523/bris.30c8q39wi1mxf205flnun3l5rl",
+  "source_authentication": "4 original official SHA256-locked HDF5 n*_ff_sound.h5",
+  "source_license": "Non-Commercial Government Licence for public sector information",
+  "target": "Bristol beamformed integrated source SPL in dB, not harmonized with NASA SPL",
+  "features": [
+    "log10(frequency_Hz)",
+    "geometric_angle_deg"
+  ],
+  "controls": {
+    "TSK": {
+      "R": 6,
+      "h": 1,
+      "lambda": 0.01,
+      "FCM_seeds": [
+        11,
+        23,
+        47,
+        71,
+        101
+      ]
+    },
+    "ExtraTrees": {
+      "n_estimators": 400,
+      "min_samples_leaf": 1,
+      "max_features": 1.0,
+      "random_state": 20261007
+    }
+  },
+  "selection": "fixed prior-style controls; no selection based on any external holdout",
+  "counts": {
+    "rows": 1464,
+    "angle_spectra": 122,
+    "geometries": 4
+  },
+  "within_geometry_angle_heldout": [
+    {
+      "geometry": "NACA 0012",
+      "n_rows": 372,
+      "n_heldout_angles": 31,
+      "fold_status": [
+        "OK",
+        "OK",
+        "OK",
+        "OK",
+        "OK"
+      ],
+      "mean_RMSE_dB": 7.439047669455228,
+      "TSK_RMSE_dB": 1.382889645827911,
+      "ET_RMSE_dB": 0.4481317162701438
+    },
+    {
+      "geometry": "NACA 0024",
+      "n_rows": 360,
+      "n_heldout_angles": 30,
+      "fold_status": [
+        "OK",
+        "OK",
+        "OK",
+        "OK",
+        "OK"
+      ],
+      "mean_RMSE_dB": 8.110411370513017,
+      "TSK_RMSE_dB": 1.2387661571318749,
+      "ET_RMSE_dB": 0.40177640854236224
+    },
+    {
+      "geometry": "NACA 16-506",
+      "n_rows": 372,
+      "n_heldout_angles": 31,
+      "fold_status": [
+        "OK",
+        "OK",
+        "OK",
+        "OK",
+        "OK"
+      ],
+      "mean_RMSE_dB": 6.889089567150866,
+      "TSK_RMSE_dB": 1.4637045395149673,
+      "ET_RMSE_dB": 0.4268139355608112
+    },
+    {
+      "geometry": "NACA 16-616",
+      "n_rows": 360,
+      "n_heldout_angles": 30,
+      "fold_status": [
+        "OK",
+        "OK",
+        "OK",
+        "OK",
+        "OK"
+      ],
+      "mean_RMSE_dB": 7.512767868507707,
+      "TSK_RMSE_dB": 1.3459059768001367,
+      "ET_RMSE_dB": 0.536933699381331
+    }
+  ],
+  "leave_geometry_out": [
+    {
+      "heldout_geometry": "NACA 0012",
+      "n_training_rows": 1092,
+      "n_test_rows": 372,
+      "n_test_spectra": 31,
+      "TSK_status": "OK",
+      "mean_RMSE_dB": 7.63178797773363,
+      "TSK_RMSE_dB": 2.7370712699508153,
+      "ET_RMSE_dB": 2.7257061494333032
+    },
+    {
+      "heldout_geometry": "NACA 0024",
+      "n_training_rows": 1104,
+      "n_test_rows": 360,
+      "n_test_spectra": 30,
+      "TSK_status": "OK",
+      "mean_RMSE_dB": 8.114191477843237,
+      "TSK_RMSE_dB": 2.0333709891746192,
+      "ET_RMSE_dB": 1.9436260632397888
+    },
+    {
+      "heldout_geometry": "NACA 16-506",
+      "n_training_rows": 1092,
+      "n_test_rows": 372,
+      "n_test_spectra": 31,
+      "TSK_status": "OK",
+      "mean_RMSE_dB": 6.909759584399442,
+      "TSK_RMSE_dB": 2.6927036378287266,
+      "ET_RMSE_dB": 2.625013990218145
+    },
+    {
+      "heldout_geometry": "NACA 16-616",
+      "n_training_rows": 1104,
+      "n_test_rows": 360,
+      "n_test_spectra": 30,
+      "TSK_status": "OK",
+      "mean_RMSE_dB": 7.7753539718994285,
+      "TSK_RMSE_dB": 3.14545682371371,
+      "ET_RMSE_dB": 3.1668590432344095
+    }
+  ],
+  "geometry_blind_collision": {
+    "unique_frequency_angle_pairs": 372,
+    "pairs_with_multiple_geometries": 372,
+    "max_frequency_drift_Hz_in_6dec_join": 0.0,
+    "minimum_pooled_training_RMSE_for_any_geometry_blind_predictor_dB": 1.9876449142319548,
+    "max_same_input_SPL_spread_dB": 12.62026427641603,
+    "median_shared_input_SPL_spread_dB": 4.299573320168442,
+    "n_shared_inputs_with_gt_1dB_spread": 366,
+    "scope": "pooled observed-input interpolation lower bound, not a LOGO test lower bound"
+  },
+  "within_geometry_angle_heldout_equal_geometry_RMSE_dB": {
+    "mean_RMSE_dB": 7.5003239752973805,
+    "TSK_RMSE_dB": 1.3602223386248635,
+    "ET_RMSE_dB": 0.4562658903283955
+  },
+  "leave_geometry_out_equal_geometry_RMSE_dB": {
+    "mean_RMSE_dB": 7.620452709300078,
+    "TSK_RMSE_dB": 2.6819166759721647,
+    "ET_RMSE_dB": 2.65173768194179
+  },
+  "scientific_status": "CONDITIONAL_BRISTOL_EXTERNAL_DB_EXPERIMENT; NOT_NASA_TO_BRISTOL_MODEL_TRANSFER"
+}
