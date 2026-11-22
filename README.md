@@ -1,5 +1,11 @@
 # NACA 0012 — TSK rule reproducibility
 
+> **Current author-review evidence — R21R8-EP2 (22 Nov 2026):**
+> Full deterministic replay completed **40/40 tasks, 28,000/28,000 attempts** (27,998 successful refits and two reproduced historical FCM failures); controlled newly reconstructed states are **not hosted in this historical public GitHub snapshot**.
+> The original finite-input sign audit remains **403 protected / 107 strict-reversible of 510** under **0.1 dB + 1% ridge objective**. An additional **contextual 1.0-dB + 1%** sensitivity finds **135 protected / 375 reversible**. NASA's reported microphone-pair agreement within 1 dB is *not* calibrated UCI measurement uncertainty.
+> See [R21R8-EP2 scope, numeric tolerances, source audit and rights boundaries](docs/R21R8_EP2_20261122_EVIDENCE_STATUS.md) and [aggregate count CSV](docs/R21R8_EP2_AGGREGATE_COUNTS.csv). **No software reuse license, published Zenodo DOI, or IEEE resubmission is asserted by this note.**
+
+
 Research software and numerical evidence for **Predictive Accuracy and Local-Rule Reproducibility in Takagi–Sugeno Models of Airfoil Self-Noise** (manuscript under author/venue preparation).
 
 > **PUBLIC RESEARCH-SOFTWARE SNAPSHOT (2026-10-09).** Uploaded at the account holder’s express request. A GitHub-hosted, version-pinned portable check verifies the published numeric CSV evidence and the file manifest; it is not a complete experimental retraining or journal submission. No Zenodo DOI or software reuse license has been issued. The data originate from the NASA/UCI Airfoil Self-Noise benchmark; no independent physical validation or generalization to other airfoil geometries is claimed.
@@ -53,4 +59,4 @@ Brooks, T., Pope, D., & Marcolini, M. (1989). *Airfoil Self-Noise* [Dataset]. UC
 
 ## Publication status and software rights
 
-No Zenodo DOI has been issued for this candidate. No software license has been selected by the authors, and no right to redistribute publisher PDFs is claimed. See [RELEASE_APPROVAL.md](RELEASE_APPROVAL.md) for remaining release requirements, and [ZENODO_DEPOSIT_DRAFT.md](ZENODO_DEPOSIT_DRAFT.md) for provisional, explicitly unapproved deposit metadata. These materials are not submitted to a journal through GitHub merely by being uploaded.
+An older *unpublished* Zenodo draft has a reserved identifier, but **no published project DOI** is asserted for R21R8-EP2. No software license has been selected by the authors, and no right to redistribute publisher PDFs is claimed. See [RELEASE_APPROVAL.md](RELEASE_APPROVAL.md) for remaining release requirements, and [ZENODO_DEPOSIT_DRAFT.md](ZENODO_DEPOSIT_DRAFT.md) for provisional, explicitly unapproved deposit metadata. These materials are not submitted to a journal through GitHub merely by being uploaded.
