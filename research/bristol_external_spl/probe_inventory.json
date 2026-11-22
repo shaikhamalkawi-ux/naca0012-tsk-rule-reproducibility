@@ -1,0 +1,407 @@
+{
+  "admission_status": "HDF5_ACQUIRED_READY_FOR_SCIENTIFIC_UNIT_AUDIT",
+  "source_doi": "10.5523/bris.30c8q39wi1mxf205flnun3l5rl",
+  "license": "Non-Commercial Government Licence for public sector information",
+  "sources": {
+    "NACA 0012": {
+      "filename": "n0012_ff_sound.h5",
+      "status": "hdf5_verified",
+      "attempts": [
+        {
+          "url": "https://data.bris.ac.uk/datasets/30c8q39wi1mxf205flnun3l5rl/NACA%200012/n0012_ff_sound.h5",
+          "status": 200,
+          "bytes": 8144
+        }
+      ],
+      "download_url": "https://data.bris.ac.uk/datasets/30c8q39wi1mxf205flnun3l5rl/NACA%200012/n0012_ff_sound.h5",
+      "sha256": "1e6b4482b46452a35a93a59252c4eb03c1bf05d32f23e8625a4af16152ac2c60",
+      "bytes": 8144,
+      "hdf5": {
+        "root_attributes": {},
+        "nodes": [
+          {
+            "path": "angles",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              31,
+              1
+            ],
+            "dtype": "float64",
+            "finite": 31,
+            "values": 31,
+            "range": [
+              -5.0,
+              25.0
+            ],
+            "value_preview": [
+              -5.0,
+              -4.0,
+              -3.0,
+              -2.0,
+              -1.0,
+              0.0,
+              1.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0,
+              8.0,
+              9.0,
+              10.0,
+              11.0,
+              12.0,
+              13.0,
+              14.0,
+              15.0,
+              16.0,
+              17.0,
+              18.0,
+              19.0,
+              20.0,
+              21.0,
+              22.0,
+              23.0,
+              24.0,
+              25.0
+            ]
+          },
+          {
+            "path": "f",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              31,
+              12
+            ],
+            "dtype": "float64",
+            "finite": 372,
+            "values": 372,
+            "range": [
+              250.0,
+              3147.3135294854187
+            ]
+          },
+          {
+            "path": "spl",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              31,
+              12
+            ],
+            "dtype": "float64",
+            "finite": 372,
+            "values": 372,
+            "range": [
+              26.299099998838816,
+              56.15970804550677
+            ]
+          }
+        ]
+      }
+    },
+    "NACA 0024": {
+      "filename": "n0024_ff_sound.h5",
+      "status": "hdf5_verified",
+      "attempts": [
+        {
+          "url": "https://data.bris.ac.uk/datasets/30c8q39wi1mxf205flnun3l5rl/NACA%200024/n0024_ff_sound.h5",
+          "status": 200,
+          "bytes": 7944
+        }
+      ],
+      "download_url": "https://data.bris.ac.uk/datasets/30c8q39wi1mxf205flnun3l5rl/NACA%200024/n0024_ff_sound.h5",
+      "sha256": "e5c772c9a130ebf9bc19b2ac2a0c1a9982ecb528ed1c7703b1c1ced78d755373",
+      "bytes": 7944,
+      "hdf5": {
+        "root_attributes": {},
+        "nodes": [
+          {
+            "path": "angles",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              30,
+              1
+            ],
+            "dtype": "float64",
+            "finite": 30,
+            "values": 30,
+            "range": [
+              -4.0,
+              25.0
+            ],
+            "value_preview": [
+              -4.0,
+              -3.0,
+              -2.0,
+              -1.0,
+              0.0,
+              1.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0,
+              8.0,
+              9.0,
+              10.0,
+              11.0,
+              12.0,
+              13.0,
+              14.0,
+              15.0,
+              16.0,
+              17.0,
+              18.0,
+              19.0,
+              20.0,
+              21.0,
+              22.0,
+              23.0,
+              24.0,
+              25.0
+            ]
+          },
+          {
+            "path": "f",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              30,
+              12
+            ],
+            "dtype": "float64",
+            "finite": 360,
+            "values": 360,
+            "range": [
+              250.0,
+              3147.3135294854187
+            ]
+          },
+          {
+            "path": "spl",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              30,
+              12
+            ],
+            "dtype": "float64",
+            "finite": 360,
+            "values": 360,
+            "range": [
+              24.860628471691932,
+              53.98595300238285
+            ]
+          }
+        ]
+      }
+    },
+    "NACA 16-506": {
+      "filename": "n16506_ff_sound.h5",
+      "status": "hdf5_verified",
+      "attempts": [
+        {
+          "url": "https://data.bris.ac.uk/datasets/30c8q39wi1mxf205flnun3l5rl/NACA%2016-506/n16506_ff_sound.h5",
+          "status": 200,
+          "bytes": 8144
+        }
+      ],
+      "download_url": "https://data.bris.ac.uk/datasets/30c8q39wi1mxf205flnun3l5rl/NACA%2016-506/n16506_ff_sound.h5",
+      "sha256": "468014d130c0a0a9f20df25aa9f197ac874f3e8ec06678187176075aebc42c5b",
+      "bytes": 8144,
+      "hdf5": {
+        "root_attributes": {},
+        "nodes": [
+          {
+            "path": "angles",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              31,
+              1
+            ],
+            "dtype": "float64",
+            "finite": 31,
+            "values": 31,
+            "range": [
+              -5.0,
+              25.0
+            ],
+            "value_preview": [
+              -5.0,
+              -4.0,
+              -3.0,
+              -2.0,
+              -1.0,
+              0.0,
+              1.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0,
+              8.0,
+              9.0,
+              10.0,
+              11.0,
+              12.0,
+              13.0,
+              14.0,
+              15.0,
+              16.0,
+              17.0,
+              18.0,
+              19.0,
+              20.0,
+              21.0,
+              22.0,
+              23.0,
+              24.0,
+              25.0
+            ]
+          },
+          {
+            "path": "f",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              31,
+              12
+            ],
+            "dtype": "float64",
+            "finite": 372,
+            "values": 372,
+            "range": [
+              250.0,
+              3147.3135294854187
+            ]
+          },
+          {
+            "path": "spl",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              31,
+              12
+            ],
+            "dtype": "float64",
+            "finite": 372,
+            "values": 372,
+            "range": [
+              26.49183242254749,
+              57.00720460469349
+            ]
+          }
+        ]
+      }
+    },
+    "NACA 16-616": {
+      "filename": "n16616_ff_sound.h5",
+      "status": "hdf5_verified",
+      "attempts": [
+        {
+          "url": "https://data.bris.ac.uk/datasets/30c8q39wi1mxf205flnun3l5rl/NACA%2016-616/n16616_ff_sound.h5",
+          "status": 200,
+          "bytes": 7944
+        }
+      ],
+      "download_url": "https://data.bris.ac.uk/datasets/30c8q39wi1mxf205flnun3l5rl/NACA%2016-616/n16616_ff_sound.h5",
+      "sha256": "40901ef2c635c6cc9d4adec60f6df265db20e1c87a8c34d4fcbeaf6f48c63e0e",
+      "bytes": 7944,
+      "hdf5": {
+        "root_attributes": {},
+        "nodes": [
+          {
+            "path": "angles",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              30,
+              1
+            ],
+            "dtype": "float64",
+            "finite": 30,
+            "values": 30,
+            "range": [
+              -4.0,
+              25.0
+            ],
+            "value_preview": [
+              -4.0,
+              -3.0,
+              -2.0,
+              -1.0,
+              0.0,
+              1.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0,
+              8.0,
+              9.0,
+              10.0,
+              11.0,
+              12.0,
+              13.0,
+              14.0,
+              15.0,
+              16.0,
+              17.0,
+              18.0,
+              19.0,
+              20.0,
+              21.0,
+              22.0,
+              23.0,
+              24.0,
+              25.0
+            ]
+          },
+          {
+            "path": "f",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              30,
+              12
+            ],
+            "dtype": "float64",
+            "finite": 360,
+            "values": 360,
+            "range": [
+              250.0,
+              3147.3135294854187
+            ]
+          },
+          {
+            "path": "spl",
+            "type": "dataset",
+            "attributes": {},
+            "shape": [
+              30,
+              12
+            ],
+            "dtype": "float64",
+            "finite": 360,
+            "values": 360,
+            "range": [
+              24.430767157180576,
+              52.9635877392387
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "operation": "read-only source acquisition; no raw data included in version control",
+  "verified_files": 4
+}
