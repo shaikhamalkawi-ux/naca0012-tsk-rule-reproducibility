@@ -1,0 +1,37 @@
+name: Probe Bristol original far-field SPL HDF5
+on:
+  push:
+    branches:
+      - research/bristol-external-spl-audit-20261123
+    paths:
+      - 'research/bristol_external_spl/bristol_source_probe.py'
+      - '.github/workflows/bristol-external-spl-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  source-admission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install HDF5 and audit dependencies
+        run: python -m pip install --disable-pip-version-check 'numpy>=1.26,<3' 'h5py>=3.10,<4' 'requests>=2.31,<3'
+      - name: Acquire published HDF5 and inventory contents without redistributing raw data
+        run: python research/bristol_external_spl/bristol_source_probe.py
+      - name: Upload exact metadata log (no raw external data)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bristol-hdf5-admission-inventory
+          path: research/bristol_external_spl/probe_inventory.json
+          if-no-files-found: warn
+      - name: Commit new metadata-only result on experiment branch
+        if: success()
+        run: |
+          if test -f research/bristol_external_spl/probe_inventory.json; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add research/bristol_external_spl/probe_inventory.json
+            git diff --cached --quiet || (git commit -m 'research: source-only Bristol HDF5 admission audit' && git push)
+          fi
